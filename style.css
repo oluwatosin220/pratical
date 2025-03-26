@@ -1,0 +1,73 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .hero {
+    background: url('hero-bg.jpg') no-repeat center center/cover;
+    color: white;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .price {
+    font-weight: bold;
+    color: #0d6efd;
+  }
+  .contact{
+    background: #6d9aed;
+    color: #fff;
+    padding: 60px;
+    text-align: center;
+}
+.contact h2{
+    margin: 40px;
+}
+.contact p{
+    margin-bottom: 40px;
+}
+.contact form{
+    max-width: 400px;
+    margin: 0;
+    text-align: left;
+}
+.contact label{
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+.contact input, .contact textarea, .contact button{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+}
+.contact textarea{
+    height: 100px;
+}
+.contact button{
+    background: #2d446c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+.contact button:hover{
+    background: #0862e9;
+}
+.baby{
+  justify-content: center;
+  align-items: center;
+}
+.baby-img{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 5px;
+  padding-left: 20px;
+}
+
+  
+  footer {
+    margin-top: 20px;
+  }
