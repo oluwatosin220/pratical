@@ -3,21 +3,165 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap" rel="stylesheet">
     <title>Document</title>
     <style>
-.col-container{
-    display: flex;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
-    </style>
+/* General Body Styling */
+body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 370vh; /* Full viewport height */
+  margin: 0;
+  background-color: #0a0202; /* Dark background for better glow visibility */
+}
+
+/* Glow Text Styling */
+.glow-text {
+  font-size: 2rem; /* Large font size */
+  font-family: 'Arial', sans-serif; /* Choose a font */
+  color: #fff; /* Text color */
+  text-transform: uppercase; /* Optional: Uppercase text */
+  text-align: center;
+
+  /* Initial Glow Effect */
+  text-shadow:
+    0 0 5px #fff, /* Inner glow */
+    0 0 10px #fff, /* Medium glow */
+    0 0 20px #ff00ff, /* Outer glow (pink) */
+    0 0 40px #00b3ff, /* Stronger glow */
+    0 0 80px #ff00ff, /* Even stronger glow */
+    0 0 90px #ff00ff; /* Maximum glow */
+
+  /* Animation for Pulsating Glow */
+  animation: glow-animation 2s infinite alternate;
+}
+
+/* Keyframes for Pulsating Glow */
+@keyframes glow-animation {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #ff00ff,
+      0 0 40px #ff00ff,
+      0 0 80px #ff00ff,
+      0 0 90px #ff00ff;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #356bdf,
+      0 0 30px #0c1fed,
+      0 0 50px #2600ff,
+      0 0 100px #0022ff,
+      0 0 120px #1c3ae4;
+  }
+}
+.nav{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1rem 5%;
+    background-color: white;
+    box-shadow: 0 2px 5px rgb(0, 0, 0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.brand{
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    text-decoration: none;
+}
+.nav-link{
+    display: flex;
+    gap: 2rem;
+}
+.nav-link a{
+    text-decoration: none;
+    color: #0b0202;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+.nav-link a:hover{
+    color: #ff6b6b;
+}
+.book-now{
+    background-color: #ff6b6b;
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.book-now:hover{
+    background-color: #ff5252;
+}
+ /* Container styling */
+.image-container {
+  display: grid; /* Use CSS Grid for layout */
+  grid-template-columns: repeat(4, 1fr); /* Create 5 equal-width columns */
+  grid-gap: 10px; /* Add spacing between the images */
+  width: 100%; /* Full width of the parent container */
+  max-width: 800px; /* Optional: limit the maximum width */
+  margin: 0 auto; /* Center the container */
+}
+
+/* Image styling */
+.image-container img {
+  width: 100%; /* Make the image fill the grid cell */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: cover; /* Ensure images are cropped to fit the container */
+  aspect-ratio: 1 / 1; /* Force images to be square (height = width) */
+  border-radius: 5px; /* Optional: rounded corners */
+}
+
+.center-text {
+  font-weight: 700;
+  text-align: center; /* Centers text horizontally */
+  width: 100%; /* Ensure the container spans the full width */
+}
+.custom-bold {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 900; /* Extra bold text */
+}
+
+
+       </style>
 </head>
 <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Braids & Beyond</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+              <li class="nav-item"><a class="nav-link" href="#booking">Book Now</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
   
     <section class="vicky" >
+    <div class="glow-text">
         <h1>Gallery</h1>
-        <h2>braids & cornrow</h2>
-        <div class="row" >
+        <h2>braids & cornrow & color</h2>
+    </div>
+        <div class="container" >
            
-    <div class="column">
+    <div class="image-container">
         <img src="./allback.jpeg" alt="hair">
         <img src="./bald.jpeg" alt="hair">
         <img src="./hhair.jpeg" alt="hair">
@@ -30,33 +174,30 @@
         <img src="./short.jpeg" alt="hair">
         <img src="./boobo.jpeg" alt="hair">
         <img src="./big.jpeg" alt="hair">
-    </div>
-        </div>
-    </section>
-    <section >
-        <div class="row">
-    <div class="column">
         <img src="./faba.jpeg" alt="hair">
         <img src="./fabaa.jpeg" alt="hair">
         <img src="./faa.jpeg" alt="hair">
         <img src="./boho.jpeg" alt="hair">
+        <img src="./2step.jpeg" alt="hair">
+        <img src="./alice.jpeg" alt="hair">
+        <img src="./allbackk.jpeg" alt="hair">
+        <img src="./loveee.jpeg" alt="hair">
+        <img src="./colo.jpeg" alt="color">
+        <img src="./cooco.jpeg" alt="color">
+        <img src="./color.jpeg" alt="color">
+        <img src="" alt="">
+        </div>
+   </div>
+   <section>
+    <div class="glow-text">
+      <h1>protective hairstyle</h1>
+      <p>benefit of protective hairstyle</p>
     </div>
-        </div>
-    </section> 
-    <section>
-        <h2>color</h2>
-        <div class="row">
-        <div class="column">
-            <img src="./colo.jpeg" alt="color">
-        </div>
-        <div>
-            <img src="./cooco.jpeg" alt="color">
-        </div>
-        <div>
-            <img src="./color.jpeg" alt="color">
-        </div>
-    </div>
-
-    </section>
+    <img src="./pro.jpeg" alt="hair">
+    <img src="./ppo.jpeg" alt="hair">
+    <p>
+        While protective styles don't directly cause hair growth,<br> they can help you retain length by minimizing breakage and damage.<br> When properly installed and maintained, protective styles can create an environment that supports hair growth by reducing the daily stress on your hair.3 Sept 2024</p>
+   </section>
+ </section>
 </body>
 </html>

@@ -4,12 +4,64 @@ body {
   
   .hero {
     background: url('hero-bg.jpg') no-repeat center center/cover;
-    color: white;
+    color: rgb(214, 37, 37);
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
   }
+  /* General Body Styling */
+body {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  height: 100vh; /* Full viewport height */
+  margin: 0;
+  background-color: #000; /* Dark background for better glow visibility */
+}
+
+/* Glow Text Styling */
+.glow-text {
+  font-size: 4rem; /* Large font size */
+  font-family: 'Arial', sans-serif; /* Choose a font */
+  color: #fff; /* Text color */
+  text-transform: uppercase; /* Optional: Uppercase text */
+  text-align: center;
+
+  /* Initial Glow Effect */
+  text-shadow:
+    0 0 5px #fff, /* Inner glow */
+    0 0 10px #fff, /* Medium glow */
+    0 0 20px #ff00ff, /* Outer glow (pink) */
+    0 0 40px #ff00ff, /* Stronger glow */
+    0 0 80px #ff00ff, /* Even stronger glow */
+    0 0 90px #ff00ff; /* Maximum glow */
+
+  /* Animation for Pulsating Glow */
+  animation: glow-animation 2s infinite alternate;
+}
+
+/* Keyframes for Pulsating Glow */
+@keyframes glow-animation {
+  0% {
+    text-shadow:
+      0 0 5px #fff,
+      0 0 10px #fff,
+      0 0 20px #ff00ff,
+      0 0 40px #ff00ff,
+      0 0 80px #ff00ff,
+      0 0 90px #ff00ff;
+  }
+  100% {
+    text-shadow:
+      0 0 10px #fff,
+      0 0 20px #fff,
+      0 0 30px #ff00ff,
+      0 0 50px #ff00ff,
+      0 0 100px #ff00ff,
+      0 0 120px #ff00ff;
+  }
+}
   
   .price {
     font-weight: bold;
