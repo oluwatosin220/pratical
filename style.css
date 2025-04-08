@@ -67,46 +67,90 @@ body {
     font-weight: bold;
     color: #0d6efd;
   }
-  .contact{
-    background: #6d9aed;
-    color: #fff;
-    padding: 60px;
-    text-align: center;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.contact h2{
-    margin: 40px;
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f9;
+  color: #333;
 }
-.contact p{
-    margin-bottom: 40px;
+
+.contact-us {
+  padding: 50px 20px;
+  text-align: center;
 }
-.contact form{
-    max-width: 400px;
-    margin: 0;
-    text-align: left;
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-.contact label{
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
 }
-.contact input, .contact textarea, .contact button{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: none;
-    border-radius: 5px;
+
+p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #666;
 }
-.contact textarea{
-    height: 100px;
+
+.form-group {
+  margin-bottom: 15px;
+  text-align: left;
 }
-.contact button{
-    background: #2d446c;
-    color: #fff;
-    font-size: 16px;
-    cursor: pointer;
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
 }
-.contact button:hover{
-    background: #0862e9;
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.submit-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
 }
 .baby{
   justify-content: center;
@@ -117,9 +161,4 @@ body {
   grid-template-columns: repeat(4,1fr);
   gap: 5px;
   padding-left: 20px;
-}
-
-  
-  footer {
-    margin-top: 20px;
-  }
+}  

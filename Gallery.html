@@ -12,6 +12,92 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+/* Navbar Styling */
+.navbarNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.logo a {
+  color: rgb(139, 135, 135);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  list-style: none;
+  display: flex;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: rgb(219, 216, 216);
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff6347; /* Tomato color on hover */
+}
+
+/* Hamburger Menu (for mobile) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+
+  .nav-links {
+    position: absolute;
+    right: 0;
+    top: 60px;
+    background-color: #333;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .navbar-nav ms-auto {
+    margin: 10px 0;
+    text-align: center;
+  }
+}
 /* General Body Styling */
 body {
   display: flex;
@@ -19,7 +105,7 @@ body {
   align-items: center; /* Center vertically */
   height: 370vh; /* Full viewport height */
   margin: 0;
-  background-color: #0a0202; /* Dark background for better glow visibility */
+  background-color: #fff; /* Dark background for better glow visibility */
 }
 
 /* Glow Text Styling */
@@ -64,43 +150,7 @@ body {
       0 0 120px #1c3ae4;
   }
 }
-.nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 1rem 5%;
-    background-color: white;
-    box-shadow: 0 2px 5px rgb(0, 0, 0,0.1);
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
-}
-.brand{
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    text-decoration: none;
-}
-.nav-link{
-    display: flex;
-    gap: 2rem;
-}
-.nav-link a{
-    text-decoration: none;
-    color: #0b0202;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-.nav-link a:hover{
-    color: #ff6b6b;
-}
-.book-now{
-    background-color: #ff6b6b;
-    color: white !important;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-}
+
 .book-now:hover{
     background-color: #ff5252;
 }
@@ -137,23 +187,23 @@ body {
        </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Braids & Beyond</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav ms-auto">
-              <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-              <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
-              <li class="nav-item"><a class="nav-link" href="#booking">Book Now</a></li>
-              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-  
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Braids & Beyond</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="Gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Book Now</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
     <section class="vicky" >
     <div class="glow-text">
         <h1>Gallery</h1>
